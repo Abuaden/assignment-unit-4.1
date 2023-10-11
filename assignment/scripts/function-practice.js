@@ -15,47 +15,80 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  return ; 
 }
 // Remember to call the function to test
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(num0, num1) {
+
+let answer = num0 + num1;
+return answer;
   // return firstNumber + secondNumber;
-}
+} console.log('running addNumbers with 510 & 2001:',addNumbers(510,2001));
+ console.log('running addNumbers with 205 & 983.44:',addNumbers(205,983.44));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
-}
-
+function multiplyThree(num0, num1, num2) {
+  let answer = num0 * num1 * num2;
+  return answer;
+} console.log('Running multiplyThree with 5,3,2:',multiplyThree(5,3,2));
+console.log('Running multiplyThree with 6,5,22.33:',multiplyThree(6,5,22.33));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
-  }
-  return;
-}
+    return true;
+  } else{
+    return false;
+   }
+  } 
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-
+console.log(isPositive(5));
+console.log(isPositive(-6));
+console.log(isPositive(56));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-
+if (array.length === 0){
+return  undefined;
+}else{
+  return array[array.length -1];
 }
+};
+
+
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
 
-}
+let array1 = [5,6,8,1];
+let array2 = [10,20,30,40];
+
+
+ function find(value, array) {
+  for(let i = 0; i < array.length; i++){
+    if (array[i]=== value) {
+      return true;
+    }
+  } return false;
+  }
+  console.log(find(6, array1));
+  console.log(find(20, array2));
+  console.log(find(50, array2));
+  console.log(find(45, array1));
+  
+
+
 
 // ----------------------
 // Stretch Goals
@@ -86,6 +119,8 @@ function allPositive() {
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+
 
 
 // DO NOT MODIFY
